@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package command.response;
+
+message ResponseMessage
+{
+    bool is_successful = 1;
+    string message = 2;
+}

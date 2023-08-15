@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package command.carrier;
+
+import "command.proto";
+import "response.proto";
+
+message CommandCarrier
+{
+    uint32 msg_len = 1;
+    command.msg.CommandMessage payload = 2;
+}
+
+message ResponseCarrier
+{
+    uint32 msg_len = 1;
+    command.response.ResponseMessage payload = 2;
+}

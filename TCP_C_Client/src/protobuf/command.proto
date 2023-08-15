@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package command.msg;
+
+enum Command
+{
+    COMMAND_INFO = 0;
+    COMMAND_LED_ON = 1;
+    COMMAND_LED_OFF = 2;
+    COMMAND_EXIT = 3;
+}
+
+message CommandMessage
+{
+    Command command = 1;
+}
