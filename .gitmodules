@@ -1,0 +1,3 @@
+[submodule "TCP_C_Client/lib/SocketManager"]
+	path = TCP_C_Client/lib/SocketManager
+	url = https://github.com/AktugHakan/socket-manager.git
