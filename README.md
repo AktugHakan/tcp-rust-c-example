@@ -23,7 +23,7 @@ git submodule update
 Use ```protoc``` to compile proto files.  
 Proto files are located at src/protobuf folder. To compile proto files:  
 ```bash
-protoc src/protobuf/*.proto --cpp_out=.
+protoc src/protobuf/*.proto -Isrc/protobuf --cpp_out=.
 ```
 This command compiles proto files in the same directory as proto files.  
 To make the files usable:  
