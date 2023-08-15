@@ -27,6 +27,7 @@ $(EXECUTABLE): $(OBJ_FILES) $(LIBRARY_PATH)
 	$(CXX) $(CXXFLAGS) -I$(LIBRARY_INCLUDE) -L$(LIBRARY_DIR) -lSockets -lpthread  -o $@ $^ $(PROTOBUF_LINKER_FLAGS)
 
 $(BIN_DIR)/%.o: $(SRC_DIR)/%.cpp
+	mkdir -p build
 	$(CXX) $(CXXFLAGS) -I$(LIBRARY_INCLUDE) -I$(INCLUDE_DIR) -c $< -o $@
 
 $(LIBRARY_PATH):
