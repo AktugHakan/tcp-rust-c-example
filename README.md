@@ -18,6 +18,20 @@ git submodule update
 ```
 
 ## Building C++ Client
+
+### Building proto Files
+Use ```protoc``` to compile proto files.  
+Proto files are located at src/protobuf folder. To compile proto files:  
+```bash
+protoc src/protobuf/*.proto --cpp_out=.
+```
+This command compiles proto files in the same directory as proto files.  
+To make the files usable:  
+1. Rename the XXX.pb.**cc** files to XXX.pb.**cpp**
+2. Move the *.cpp* files to src directory
+3. Move the *.h* files to include directory
+
+### Building cpp Files
 C++ client is in the ```TCP_C_Client``` directory.
 In this directory run
 ```bash
@@ -25,6 +39,7 @@ make
 ```
 to build the client side program.  
 Program is generated as ```build/main```.
+
 
 ### Cross-Compiling
 Built-in Makefile also supports cross-compiling. To cross-compile the client program:
